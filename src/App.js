@@ -5,10 +5,10 @@ import { Route, Switch } from "react-router-dom";
 function App() {
   return (
     <Switch>
-      <Route exact path="/Product-app">
+      <Route exact path="/closes-shop">
         <ProductList />
       </Route>
-      <Route path="/Product-app/:productId">
+      <Route path="/closes-shop/:productId">
         <ProductDetails />
       </Route>
     </Switch>

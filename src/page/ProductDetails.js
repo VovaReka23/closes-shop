@@ -52,7 +52,7 @@ const ProductDetails = () => {
 	};
 	return (
 		<div className="product__details">
-			<Link className="product__details-nav" to={`/Product-app`}>Back to products</Link>
+			<Link className="product__details-nav" to={`/closes-shop`}>Back to products</Link>
 			{visiblePopup && (
 				<AddEditCartProduct onClick={toggleVisiblePopup} onEditProduct={onEditProduct} defValue={thisProduct} />
 			)}

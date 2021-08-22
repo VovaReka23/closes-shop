@@ -11,7 +11,7 @@ const CartProduct = ({ imageUrl, name, description, price, count, id, onRemovePr
 	return (
 		<div className={`product__list-item`}>
 			{imageUrl && <img src={imageUrl} alt="product" />}
-			{name && <h2 className='product__list-name'> <Link to={`/Product-app/${id}`}>{name}</Link></h2>}
+			{name && <h2 className='product__list-name'> <Link to={`/closes-shop/${id}`}>{name}</Link></h2>}
 			{description && <p className='product__list-description'>{description}</p>}
 			{price && <span className='product__list-price'>{price}$</span>}
 			{count && <p className='product__list-count'> <span>count: </span>{count}</p>}
