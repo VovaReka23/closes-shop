@@ -38,9 +38,9 @@ export const setComments = (comments) => ({
 	type: 'SET_COMMENTS',
 	payload: comments,
 });
-export const addComment = (productId, auther, description) => ({
+export const addComment = (productId, auther, description, date) => ({
 	type: 'ADD_COMMENT',
-	payload: { productId, auther, description },
+	payload: { productId, auther, description, date },
 });
 
 

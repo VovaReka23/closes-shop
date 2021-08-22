@@ -2,6 +2,7 @@ import React from 'react';
 import { AddEditCartProduct } from '../components';
 import { useParams, } from "react-router-dom"
 import { useDispatch, useSelector } from 'react-redux';
+import dayjs from 'dayjs'
 import {
 	editProducts,
 	addComment,
@@ -10,7 +11,6 @@ import {
 	getProducts
 } from '../redux/actions/product';
 import { Link } from "react-router-dom";
-
 const ProductDetails = () => {
 	const [nameComment, setNameComment] = React.useState('');
 	const [textComment, setTextComment] = React.useState('');
@@ -36,7 +36,7 @@ const ProductDetails = () => {
 		setNameComment(event.target.value)
 	})
 	const onAddComment = React.useCallback((event) => {
-		dispatch(addComment(thisProduct.id, nameComment, textComment));
+		dispatch(addComment(thisProduct.id, nameComment, textComment, dayjs(Date.now()).format('HH:mm DD.MM.YYYY')));
 		setNameComment('');
 		setTextComment('');
 		dispatch(setComments());

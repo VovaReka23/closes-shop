@@ -218,7 +218,7 @@ const products = (state = initialState, action) => {
 		case 'ADD_COMMENT': {
 			let newComment = {
 				id: Date.now(),
-				date: Date(Date.now()),
+				date: action.payload.date,
 				productId: action.payload.productId,
 				auther: action.payload.auther,
 				description: action.payload.description,
