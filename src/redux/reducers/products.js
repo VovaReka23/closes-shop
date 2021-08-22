@@ -196,7 +196,6 @@ const products = (state = initialState, action) => {
 			};
 		}
 		case 'SET_COMMENTS': {
-			console.log('comment')
 			const items = state.items.map((item) => {
 				if (localStorage.getItem('comment')) {
 					const comment = JSON.parse(localStorage.getItem('comment'));

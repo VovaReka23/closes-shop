@@ -104,7 +104,6 @@ const AddCartProduct = ({ onAddProduct, onClick }) => {
 		})
 		const arr = Object.values(newObj);
 		const valid = arr.every((item) => item !== '');
-		console.log(arr)
 		if (!valid) {
 			return false;
 		}
